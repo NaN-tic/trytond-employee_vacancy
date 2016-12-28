@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+     copyright notices and license terms. -->
+<form string="Vacancy URL">
+    <label name="vacancy"/>
+    <field name="vacancy"/>
+    <newline/>
+    <label name="url"/>
+    <field name="url" colspan="3"/>
+</form>

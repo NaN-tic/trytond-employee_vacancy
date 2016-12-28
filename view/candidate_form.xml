@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+     copyright notices and license terms. -->
+<form string="Candidate">
+    <label name="vacancy"/>
+    <field name="vacancy"/>
+    <newline/>
+    <label name="party"/>
+    <field name="party"/>
+    <label name="resume"/>
+    <field name="resume"/>
+    <notebook>
+        <page string="General" id="general">
+            <label name="phase"/>
+            <field name="phase"/>
+            <label name="qualification"/>
+            <field name="qualification"/>
+            <label name="application_date"/>
+            <field name="application_date"/>
+            <label name="application_method"/>
+            <field name="application_method"/>
+            <label name="sequence"/>
+            <field name="sequence"/>
+            <separator name="notes" colspan="4"/>
+            <field name="notes" colspan="4"/>
+        </page>
+        <page name="activities">
+            <field name="activities" colspan="4"/>
+        </page>
+    </notebook>
+</form>

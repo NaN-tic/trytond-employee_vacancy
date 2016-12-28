@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+     copyright notices and license terms. -->
+<form string="Resume">
+    <group col="2" colspan="2" id="party">
+        <label name="party"/>
+        <field name="party"/>
+        <label name="url"/>
+        <field name="url" widget="url"/>
+    </group>
+    <group col="1" colspan="2" id="picture">
+        <separator name="picture"/>
+        <field name="picture" widget="image"/>
+    </group>
+    <notebook>
+        <page name="text">
+            <field name="text" colspan="4"/>
+        </page>
+        <page name="notes">
+            <field name="notes" colspan="4"/>
+        </page>
+        <page string="Personal" id="personal">
+            <label name="birthdate"/>
+            <field name="birthdate"/>
+            <label name="age"/>
+            <field name="age"/>
+            <label name="citizenship"/>
+            <field name="citizenship"/>
+            <label name="gender"/>
+            <field name="gender"/>
+        </page>
+        <page name="educations">
+            <field name="educations" colspan="4"/>
+        </page>
+        <page name="languages">
+            <field name="languages" colspan="4"/>
+        </page>
+        <page name="positions">
+            <field name="positions" colspan="4"/>
+        </page>
+        <page name="skills">
+            <field name="skills" colspan="4"/>
+        </page>
+        <page name="cards">
+            <field name="cards" colspan="4"/>
+        </page>
+    </notebook>
+</form>

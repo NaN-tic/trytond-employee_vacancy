@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+     copyright notices and license terms. -->
+<form string="Resume Language">
+    <label name="resume"/>
+    <field name="resume"/>
+    <newline/>
+    <label name="language"/>
+    <field name="language"/>
+    <label name="fluency"/>
+    <field name="fluency"/>
+    <label name="skill"/>
+    <field name="skill"/>
+    <separator name="notes" colspan="4"/>
+    <field name="notes" colspan="4"/>
+</form>

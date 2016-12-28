@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+     copyright notices and license terms. -->
+<form string="Vacancy">
+    <label name="name"/>
+    <field name="name"/>
+    <label name="employee"/>
+    <field name="employee"/>
+    <label name="company"/>
+    <field name="company"/>
+    <newline/>
+    <label name="start"/>
+    <field name="start"/>
+    <label name="end"/>
+    <field name="end"/>
+    <notebook>
+        <page name="description">
+            <field name="description" colspan="2"/>
+            <field name="urls" colspan="2"/>
+        </page>
+        <page name="candidates">
+            <field name="candidates" colspan="4"/>
+        </page>
+    </notebook>
+    <label name="state"/>
+    <field name="state"/>
+</form>

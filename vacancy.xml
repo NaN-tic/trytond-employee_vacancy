@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+     copyright notices and license terms. -->
+<tryton>
+    <data>
+        <record model="res.group" id="group_employee_vacancy_admin">
+            <field name="name">Employee Vacancy Administration</field>
+        </record>
+        <record model="res.user-res.group" id="user_admin_group_employee_vacancy_admin">
+            <field name="user" ref="res.user_admin"/>
+            <field name="group" ref="group_employee_vacancy_admin"/>
+        </record>
+        <record model="res.user-res.group" id="user_trigger_group_employee_vacancy_admin">
+            <field name="user" ref="res.user_trigger"/>
+            <field name="group" ref="group_employee_vacancy_admin"/>
+        </record>
+        <record model="res.group" id="group_employee_vacancy">
+            <field name="name">Employee Vacancy</field>
+        </record>
+        <record model="res.user-res.group" id="user_admin_group_employee_vacancy">
+            <field name="user" ref="res.user_admin"/>
+            <field name="group" ref="group_employee_vacancy"/>
+        </record>
+        <record model="res.user-res.group" id="user_trigger_group_employee_vacancy">
+            <field name="user" ref="res.user_trigger"/>
+            <field name="group" ref="group_employee_vacancy"/>
+        </record>
+        <record model="ir.ui.view" id="employee_candidate_view_form">
+            <field name="model">employee.candidate</field>
+            <field name="type">form</field>
+            <field name="name">candidate_form</field>
+        </record>
+        <record model="ir.ui.view" id="employee_candidate_view_list">
+            <field name="model">employee.candidate</field>
+            <field name="type">tree</field>
+            <field name="name">candidate_list</field>
+        </record>
+        <record model="ir.action.act_window" id="act_employee_candidate">
+            <field name="name">Candidate</field>
+            <field name="res_model">employee.candidate</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_employee_candidate_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="employee_candidate_view_list"/>
+            <field name="act_window" ref="act_employee_candidate"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_employee_candidate_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="employee_candidate_view_form"/>
+            <field name="act_window" ref="act_employee_candidate"/>
+        </record>
+        <record model="ir.model.access" id="access_employee_candidate_default">
+            <field name="model" search="[('model', '=', 'employee.candidate')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_employee_candidate">
+            <field name="model" search="[('model', '=', 'employee.candidate')]"/>
+            <field name="group" ref="group_employee_vacancy"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.ui.view" id="employee_candidate_phase_view_form">
+            <field name="model">employee.candidate.phase</field>
+            <field name="type">form</field>
+            <field name="name">candidate_phase_form</field>
+        </record>
+        <record model="ir.ui.view" id="employee_candidate_phase_view_list">
+            <field name="model">employee.candidate.phase</field>
+            <field name="type">tree</field>
+            <field name="name">candidate_phase_list</field>
+        </record>
+        <record model="ir.action.act_window" id="act_employee_candidate_phase">
+            <field name="name">Candidate Phase</field>
+            <field name="res_model">employee.candidate.phase</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_employee_candidate_phase_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="employee_candidate_phase_view_list"/>
+            <field name="act_window" ref="act_employee_candidate_phase"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_employee_candidate_phase_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="employee_candidate_phase_view_form"/>
+            <field name="act_window" ref="act_employee_candidate_phase"/>
+        </record>
+        <record model="ir.model.access" id="access_employee_candidate_phase_default">
+            <field name="model" search="[('model', '=', 'employee.candidate.phase')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_employee_candidate_phase">
+            <field name="model" search="[('model', '=', 'employee.candidate.phase')]"/>
+            <field name="group" ref="group_employee_vacancy"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_employee_candidate_phase_admin">
+            <field name="model" search="[('model', '=', 'employee.candidate.phase')]"/>
+            <field name="group" ref="group_employee_vacancy_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.ui.view" id="employee_candidate_application_method_view_form">
+            <field name="model">employee.candidate.application_method</field>
+            <field name="type">form</field>
+            <field name="name">candidate_application_method_form</field>
+        </record>
+        <record model="ir.ui.view" id="employee_candidate_application_method_view_list">
+            <field name="model">employee.candidate.application_method</field>
+            <field name="type">tree</field>
+            <field name="name">candidate_application_method_list</field>
+        </record>
+        <record model="ir.action.act_window" id="act_employee_candidate_application_method">
+            <field name="name">Candidate Application Method</field>
+            <field name="res_model">employee.candidate.application_method</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_employee_candidate_application_method_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="employee_candidate_application_method_view_list"/>
+            <field name="act_window" ref="act_employee_candidate_application_method"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_employee_candidate_application_method_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="employee_candidate_application_method_view_form"/>
+            <field name="act_window" ref="act_employee_candidate_application_method"/>
+        </record>
+        <record model="ir.model.access" id="access_employee_candidate_application_method_default">
+            <field name="model" search="[('model', '=', 'employee.candidate.application_method')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_employee_candidate_application_method">
+            <field name="model" search="[('model', '=', 'employee.candidate.application_method')]"/>
+            <field name="group" ref="group_employee_vacancy"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_employee_candidate_application_method_admin">
+            <field name="model" search="[('model', '=', 'employee.candidate.application_method')]"/>
+            <field name="group" ref="group_employee_vacancy_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.ui.view" id="employee_card_type_view_form">
+            <field name="model">employee.card.type</field>
+            <field name="type">form</field>
+            <field name="name">card_type_form</field>
+        </record>
+        <record model="ir.ui.view" id="employee_card_type_view_list">
+            <field name="model">employee.card.type</field>
+            <field name="type">tree</field>
+            <field name="name">card_type_list</field>
+        </record>
+        <record model="ir.action.act_window" id="act_employee_card_type">
+            <field name="name">Employee Card Type</field>
+            <field name="res_model">employee.card.type</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_employee_card_type_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="employee_card_type_view_list"/>
+            <field name="act_window" ref="act_employee_card_type"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_employee_card_type_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="employee_card_type_view_form"/>
+            <field name="act_window" ref="act_employee_card_type"/>
+        </record>
+        <record model="ir.model.access" id="access_employee_card_type_default">
+            <field name="model" search="[('model', '=', 'employee.card.type')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_employee_card_type">
+            <field name="model" search="[('model', '=', 'employee.card.type')]"/>
+            <field name="group" ref="group_employee_vacancy"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_employee_card_type_admin">
+            <field name="model" search="[('model', '=', 'employee.card.type')]"/>
+            <field name="group" ref="group_employee_vacancy_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.ui.view" id="employee_education_level_view_form">
+            <field name="model">employee.education.level</field>
+            <field name="type">form</field>
+            <field name="name">education_level_form</field>
+        </record>
+        <record model="ir.ui.view" id="employee_education_level_view_list">
+            <field name="model">employee.education.level</field>
+            <field name="type">tree</field>
+            <field name="name">education_level_list</field>
+        </record>
+        <record model="ir.action.act_window" id="act_employee_education_level">
+            <field name="name">Employee Education Level</field>
+            <field name="res_model">employee.education.level</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_employee_education_level_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="employee_education_level_view_list"/>
+            <field name="act_window" ref="act_employee_education_level"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_employee_education_level_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="employee_education_level_view_form"/>
+            <field name="act_window" ref="act_employee_education_level"/>
+        </record>
+        <record model="ir.model.access" id="access_employee_education_level_default">
+            <field name="model" search="[('model', '=', 'employee.education.level')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_employee_education_level">
+            <field name="model" search="[('model', '=', 'employee.education.level')]"/>
+            <field name="group" ref="group_employee_vacancy"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_employee_education_level_admin">
+            <field name="model" search="[('model', '=', 'employee.education.level')]"/>
+            <field name="group" ref="group_employee_vacancy_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.ui.view" id="employee_resume_view_form">
+            <field name="model">employee.resume</field>
+            <field name="type">form</field>
+            <field name="name">resume_form</field>
+        </record>
+        <record model="ir.ui.view" id="employee_resume_view_list">
+            <field name="model">employee.resume</field>
+            <field name="type">tree</field>
+            <field name="name">resume_list</field>
+        </record>
+        <record model="ir.action.act_window" id="act_employee_resume">
+            <field name="name">Resume</field>
+            <field name="res_model">employee.resume</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_employee_resume_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="employee_resume_view_list"/>
+            <field name="act_window" ref="act_employee_resume"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_employee_resume_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="employee_resume_view_form"/>
+            <field name="act_window" ref="act_employee_resume"/>
+        </record>
+        <record model="ir.model.access" id="access_employee_resume_default">
+            <field name="model" search="[('model', '=', 'employee.resume')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_employee_resume">
+            <field name="model" search="[('model', '=', 'employee.resume')]"/>
+            <field name="group" ref="group_employee_vacancy"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.model.access" id="access_employee_resume_admin">
+            <field name="model" search="[('model', '=', 'employee.resume')]"/>
+            <field name="group" ref="group_employee_vacancy_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.ui.view" id="employee_resume_card_view_form">
+            <field name="model">employee.resume.card</field>
+            <field name="type">form</field>
+            <field name="name">resume_card_form</field>
+        </record>
+        <record model="ir.ui.view" id="employee_resume_card_view_list">
+            <field name="model">employee.resume.card</field>
+            <field name="type">tree</field>
+            <field name="name">resume_card_list</field>
+        </record>
+        <record model="ir.action.act_window" id="act_employee_resume_card">
+            <field name="name">Candidate Card</field>
+            <field name="res_model">employee.resume.card</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_employee_resume_card_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="employee_resume_card_view_list"/>
+            <field name="act_window" ref="act_employee_resume_card"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_employee_resume_card_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="employee_resume_card_view_form"/>
+            <field name="act_window" ref="act_employee_resume_card"/>
+        </record>
+        <record model="ir.model.access" id="access_employee_resume_card_default">
+            <field name="model" search="[('model', '=', 'employee.resume.card')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_employee_resume_card">
+            <field name="model" search="[('model', '=', 'employee.resume.card')]"/>
+            <field name="group" ref="group_employee_vacancy"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.ui.view" id="employee_resume_education_view_form">
+            <field name="model">employee.resume.education</field>
+            <field name="type">form</field>
+            <field name="name">resume_education_form</field>
+        </record>
+        <record model="ir.ui.view" id="employee_resume_education_view_list">
+            <field name="model">employee.resume.education</field>
+            <field name="type">tree</field>
+            <field name="name">resume_education_list</field>
+        </record>
+        <record model="ir.action.act_window" id="act_employee_resume_education">
+            <field name="name">Resume Education</field>
+            <field name="res_model">employee.resume.education</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_employee_resume_education_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="employee_resume_education_view_list"/>
+            <field name="act_window" ref="act_employee_resume_education"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_employee_resume_education_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="employee_resume_education_view_form"/>
+            <field name="act_window" ref="act_employee_resume_education"/>
+        </record>
+        <record model="ir.model.access" id="access_employee_resume_education_default">
+            <field name="model" search="[('model', '=', 'employee.resume.education')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_employee_resume_education">
+            <field name="model" search="[('model', '=', 'employee.resume.education')]"/>
+            <field name="group" ref="group_employee_vacancy"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.ui.view" id="employee_resume_language_view_form">
+            <field name="model">employee.resume.language</field>
+            <field name="type">form</field>
+            <field name="name">resume_language_form</field>
+        </record>
+        <record model="ir.ui.view" id="employee_resume_language_view_list">
+            <field name="model">employee.resume.language</field>
+            <field name="type">tree</field>
+            <field name="name">resume_language_list</field>
+        </record>
+        <record model="ir.action.act_window" id="act_employee_resume_language">
+            <field name="name">Resume Language</field>
+            <field name="res_model">employee.resume.language</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_employee_resume_language_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="employee_resume_language_view_list"/>
+            <field name="act_window" ref="act_employee_resume_language"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_employee_resume_language_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="employee_resume_language_view_form"/>
+            <field name="act_window" ref="act_employee_resume_language"/>
+        </record>
+        <record model="ir.model.access" id="access_employee_resume_language_default">
+            <field name="model" search="[('model', '=', 'employee.resume.language')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_employee_resume_language">
+            <field name="model" search="[('model', '=', 'employee.resume.language')]"/>
+            <field name="group" ref="group_employee_vacancy"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.ui.view" id="employee_resume_position_view_form">
+            <field name="model">employee.resume.position</field>
+            <field name="type">form</field>
+            <field name="name">resume_position_form</field>
+        </record>
+        <record model="ir.ui.view" id="employee_resume_position_view_list">
+            <field name="model">employee.resume.position</field>
+            <field name="type">tree</field>
+            <field name="name">resume_position_list</field>
+        </record>
+        <record model="ir.action.act_window" id="act_employee_resume_position">
+            <field name="name">Resume Position</field>
+            <field name="res_model">employee.resume.position</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_employee_resume_position_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="employee_resume_position_view_list"/>
+            <field name="act_window" ref="act_employee_resume_position"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_employee_resume_position_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="employee_resume_position_view_form"/>
+            <field name="act_window" ref="act_employee_resume_position"/>
+        </record>
+        <record model="ir.model.access" id="access_employee_resume_position_default">
+            <field name="model" search="[('model', '=', 'employee.resume.position')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_employee_resume_position">
+            <field name="model" search="[('model', '=', 'employee.resume.position')]"/>
+            <field name="group" ref="group_employee_vacancy"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.ui.view" id="employee_resume_skill_view_form">
+            <field name="model">employee.resume.skill</field>
+            <field name="type">form</field>
+            <field name="name">resume_skill_form</field>
+        </record>
+        <record model="ir.ui.view" id="employee_resume_skill_view_list">
+            <field name="model">employee.resume.skill</field>
+            <field name="type">tree</field>
+            <field name="name">resume_skill_list</field>
+        </record>
+        <record model="ir.action.act_window" id="act_employee_resume_skill">
+            <field name="name">Resume Skill</field>
+            <field name="res_model">employee.resume.skill</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_employee_resume_skill_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="employee_resume_skill_view_list"/>
+            <field name="act_window" ref="act_employee_resume_skill"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_employee_resume_skill_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="employee_resume_skill_view_form"/>
+            <field name="act_window" ref="act_employee_resume_skill"/>
+        </record>
+        <record model="ir.model.access" id="access_employee_resume_skill_default">
+            <field name="model" search="[('model', '=', 'employee.resume.skill')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_employee_resume_skill">
+            <field name="model" search="[('model', '=', 'employee.resume.skill')]"/>
+            <field name="group" ref="group_employee_vacancy"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.ui.view" id="employee_skill_type_view_form">
+            <field name="model">employee.skill.type</field>
+            <field name="type">form</field>
+            <field name="name">skill_type_form</field>
+        </record>
+        <record model="ir.ui.view" id="employee_skill_type_view_list">
+            <field name="model">employee.skill.type</field>
+            <field name="type">tree</field>
+            <field name="name">skill_type_list</field>
+        </record>
+        <record model="ir.action.act_window" id="act_employee_skill_type">
+            <field name="name">Employee Skill Type</field>
+            <field name="res_model">employee.skill.type</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_employee_skill_type_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="employee_skill_type_view_list"/>
+            <field name="act_window" ref="act_employee_skill_type"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_employee_skill_type_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="employee_skill_type_view_form"/>
+            <field name="act_window" ref="act_employee_skill_type"/>
+        </record>
+        <record model="ir.model.access" id="access_employee_skill_type_default">
+            <field name="model" search="[('model', '=', 'employee.skill.type')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_employee_skill_type">
+            <field name="model" search="[('model', '=', 'employee.skill.type')]"/>
+            <field name="group" ref="group_employee_vacancy"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_employee_skill_type_admin">
+            <field name="model" search="[('model', '=', 'employee.skill.type')]"/>
+            <field name="group" ref="group_employee_vacancy_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.ui.view" id="employee_vacancy_view_form">
+            <field name="model">employee.vacancy</field>
+            <field name="type">form</field>
+            <field name="name">vacancy_form</field>
+        </record>
+        <record model="ir.ui.view" id="employee_vacancy_view_list">
+            <field name="model">employee.vacancy</field>
+            <field name="type">tree</field>
+            <field name="name">vacancy_list</field>
+        </record>
+        <record model="ir.action.act_window" id="act_employee_vacancy">
+            <field name="name">Vacancy</field>
+            <field name="res_model">employee.vacancy</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_employee_vacancy_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="employee_vacancy_view_list"/>
+            <field name="act_window" ref="act_employee_vacancy"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_employee_vacancy_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="employee_vacancy_view_form"/>
+            <field name="act_window" ref="act_employee_vacancy"/>
+        </record>
+        <record model="ir.model.access" id="access_employee_vacancy_default">
+            <field name="model" search="[('model', '=', 'employee.vacancy')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_employee_vacancy">
+            <field name="model" search="[('model', '=', 'employee.vacancy')]"/>
+            <field name="group" ref="group_employee_vacancy"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.ui.view" id="employee_vacancy_url_view_form">
+            <field name="model">employee.vacancy.url</field>
+            <field name="type">form</field>
+            <field name="name">vacancy_url_form</field>
+        </record>
+        <record model="ir.ui.view" id="employee_vacancy_url_view_list">
+            <field name="model">employee.vacancy.url</field>
+            <field name="type">tree</field>
+            <field name="name">vacancy_url_list</field>
+        </record>
+        <record model="ir.action.act_window" id="act_employee_vacancy_url">
+            <field name="name">Vacancy URL</field>
+            <field name="res_model">employee.vacancy.url</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_employee_vacancy_url_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="employee_vacancy_url_view_list"/>
+            <field name="act_window" ref="act_employee_vacancy_url"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_employee_vacancy_url_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="employee_vacancy_url_view_form"/>
+            <field name="act_window" ref="act_employee_vacancy_url"/>
+        </record>
+        <record model="ir.model.access" id="access_employee_vacancy_url_default">
+            <field name="model" search="[('model', '=', 'employee.vacancy.url')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_employee_vacancy_url">
+            <field name="model" search="[('model', '=', 'employee.vacancy.url')]"/>
+            <field name="group" ref="group_employee_vacancy"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+          <record model="ir.rule.group" id="rule_group_employee_vacancy">
+            <field name="model" search="[('model', '=', 'employee.vacancy')]"/>
+            <field name="global_p" eval="True"/>
+          </record>
+
+          <record model="ir.rule" id="rule_employee_vacancy1">
+            <field name="domain" eval="[('company', '=', Eval('user', {}).get('company', None))]" pyson="1"/>
+            <field name="rule_group" ref="rule_group_employee_vacancy"/>
+          </record>
+
+          <record model="ir.rule.group" id="rule_group_employee_candidate">
+            <field name="model" search="[('model', '=', 'employee.candidate')]"/>
+            <field name="global_p" eval="True"/>
+          </record>
+
+          <record model="ir.rule" id="rule_employee_candidate1">
+            <field name="domain" eval="[('company', '=', Eval('user', {}).get('company', None))]" pyson="1"/>
+            <field name="rule_group" ref="rule_group_employee_vacancy"/>
+          </record>
+
+
+        <!-- Menus -->
+        <menuitem id="menu_vacancy" name="Employee Vacancy" sequence="1" />
+        <record model="ir.ui.menu-res.group" id="menu_vacancy_group_employee_vacancy">
+          <field name="menu" ref="menu_vacancy"/>
+          <field name="group" ref="group_employee_vacancy"/>
+        </record>
+
+        <menuitem id="menu_configuration" name="Configuration"
+            parent="menu_vacancy" sequence="1"/>
+        <record model="ir.ui.menu-res.group" id="menu_vacancy_group_employee_vacancy_admin">
+          <field name="menu" ref="menu_configuration"/>
+          <field name="group" ref="group_employee_vacancy_admin"/>
+        </record>
+
+        <menuitem action="act_employee_resume" id="menu_resume" parent="menu_vacancy" sequence="10" name="Resume"/>
+
+        <menuitem action="act_employee_vacancy" id="menu_vacancy_vacancy" parent="menu_vacancy" sequence="20" name="Vacancy"/>
+        <menuitem action="act_employee_vacancy_url" id="menu_vacancy_url" parent="menu_vacancy_vacancy" sequence="10" name="Vacancy URL"/>
+        <menuitem action="act_employee_candidate" id="menu_candidate" parent="menu_vacancy_vacancy" sequence="20" name="Candidate"/>
+
+        <menuitem action="act_employee_candidate_phase" id="menu_candidate_phase" parent="menu_configuration" sequence="10" name="Candidate Phase"/>
+        <menuitem action="act_employee_candidate_application_method" id="menu_candidate_application_method" parent="menu_configuration" sequence="10" name="Candidate Application Method"/>
+        <menuitem action="act_employee_card_type" id="menu_card_type" parent="menu_configuration" sequence="20" name="Card Type"/>
+        <menuitem action="act_employee_education_level" id="menu_education_level" parent="menu_configuration" sequence="30" name="Education Level"/>
+
+        <menuitem action="act_employee_resume_card" id="menu_resume_card" parent="menu_resume" sequence="1" name="Resume Card"/>
+        <menuitem action="act_employee_resume_education" id="menu_resume_education" parent="menu_resume" sequence="1" name="Resume Education"/>
+        <menuitem action="act_employee_resume_language" id="menu_resume_language" parent="menu_resume" sequence="1" name="Resume Language"/>
+        <menuitem action="act_employee_resume_position" id="menu_resume_position" parent="menu_resume" sequence="1" name="Resume Position"/>
+        <menuitem action="act_employee_resume_skill" id="menu_resume_skill" parent="menu_resume" sequence="1" name="Resume Skill"/>
+        <menuitem action="act_employee_skill_type" id="menu_skill_type" parent="menu_configuration" sequence="1" name="Employee Skill Type"/>
+    </data>
+</tryton>

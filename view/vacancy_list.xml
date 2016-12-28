@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+     copyright notices and license terms. -->
+<tree string="Vacancy">
+    <field name="name"/>
+    <field name="company"/>
+    <field name="employee"/>
+    <field name="start"/>
+    <field name="end"/>
+    <field name="state"/>
+</tree>

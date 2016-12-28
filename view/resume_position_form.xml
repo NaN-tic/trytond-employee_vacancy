@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+     copyright notices and license terms. -->
+<form string="Resume Position">
+    <label name="resume"/>
+    <field name="resume"/>
+    <newline/>
+    <label name="title"/>
+    <field name="title"/>
+    <label name="organization"/>
+    <field name="organization"/>
+    <label name="location"/>
+    <field name="location"/>
+    <newline/>
+    <label name="start"/>
+    <field name="start"/>
+    <label name="end"/>
+    <field name="end"/>
+    <separator name="description" colspan="4"/>
+    <field name="description" colspan="4"/>
+</form>

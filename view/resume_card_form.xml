@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+     copyright notices and license terms. -->
+<form string="Candidate Card">
+    <label name="resume"/>
+    <field name="resume"/>
+    <newline/>
+    <label name="card"/>
+    <field name="card"/>
+    <label name="identifier"/>
+    <field name="identifier"/>
+    <label name="issue_date"/>
+    <field name="issue_date"/>
+    <label name="expiry_date"/>
+    <field name="expiry_date"/>
+</form>
