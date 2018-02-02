@@ -6,33 +6,33 @@ Imports::
     >>> import datetime
     >>> from dateutil.relativedelta import relativedelta
     >>> from decimal import Decimal
+    >>> from trytond.tests.tools import activate_modules
     >>> from operator import attrgetter
-    >>> from proteus import config, Model, Wizard
+    >>> from proteus import Model, Wizard
     >>> from trytond.modules.company.tests.tools import create_company, \
     ...     get_company
-    >>> from trytond.modules.account.tests.tools import create_fiscalyear, \
-    ...     create_chart, get_accounts, create_tax, set_tax_code
-    >>> from trytond.modules.account_invoice.tests.tools import \
-    ...     set_fiscalyear_invoice_sequences
     >>> today = datetime.date.today()
 
 Create database::
 
-    >>> config = config.set_trytond()
-    >>> config.pool.test = True
-
-Install employee_vacancy::
-
-    >>> Module = Model.get('ir.module')
-    >>> account_invoice_module, = Module.find(
-    ...     [('name', '=', 'employee_vacancy')])
-    >>> account_invoice_module.click('install')
-    >>> Wizard('ir.module.install_upgrade').execute('upgrade')
+    >>> config = activate_modules('employee_vacancy')
 
 Create company::
 
     >>> _ = create_company()
     >>> company = get_company()
+
+Create employee::
+
+    >>> Party = Model.get('party.party')
+    >>> party = Party(name='Employee')
+    >>> party.save()
+    >>> Employee = Model.get('company.employee')
+    >>> employee = Employee()
+    >>> employee.party = party
+    >>> employee.company = company
+    >>> employee.save()
+
 
 Create vacancy administrator user::
 
@@ -92,6 +92,7 @@ Create party::
     >>> party_candidate_b = Party(name='Candidate B')
     >>> party_candidate_b.save()
 
+
 Create resume::
 
     >>> Resume = Model.get('employee.resume')
@@ -100,12 +101,15 @@ Create resume::
     >>> resume_a.age = 22
     >>> resume_a.save()
 
+
+
 Create vacancy::
 
     >>> Vacancy = Model.get('employee.vacancy')
     >>> Url = Model.get('employee.vacancy.url')
     >>> vacancy = Vacancy()
     >>> vacancy.name = 'Vacancy'
+    >>> vacancy.employee = employee
     >>> vacancy.text = 'We have a vacancy.'
     >>> vacancy.start = datetime.date.today() - relativedelta(days=15)
     >>> vacancy.end = datetime.date.today()
