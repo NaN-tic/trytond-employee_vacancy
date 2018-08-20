@@ -1,8 +1,8 @@
 # The COPYRIGHT file at the top level of this repository contains the full
 # copyright notices and license terms.
 from trytond.pool import Pool
-import activity
-import vacancy
+from . import activity
+from . import vacancy
 
 def register():
     Pool.register(

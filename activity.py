@@ -6,9 +6,8 @@ from trytond.transaction import Transaction
 __all__ = ['Activity']
 
 
-class Activity:
+class Activity(metaclass=PoolMeta):
     __name__ = 'activity.activity'
-    __metaclass__ = PoolMeta
 
     @classmethod
     def default_party(cls):
