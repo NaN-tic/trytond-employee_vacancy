@@ -3,6 +3,7 @@
 from trytond.pool import Pool
 from . import activity
 from . import vacancy
+from . import party
 
 def register():
     Pool.register(
@@ -22,3 +23,6 @@ def register():
         vacancy.ResumeEducation,
         vacancy.ResumePosition,
         module='employee_vacancy', type_='model')
+    Pool.register(
+        party.PartyReplace,
+        module='employee_vacancy', type_='wizard')
