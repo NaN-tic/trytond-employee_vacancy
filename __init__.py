@@ -1,8 +1,10 @@
 # The COPYRIGHT file at the top level of this repository contains the full
 # copyright notices and license terms.
 from trytond.pool import Pool
-import activity
-import vacancy
+from . import activity
+from . import vacancy
+from . import party
+
 
 def register():
     Pool.register(
@@ -22,3 +24,6 @@ def register():
         vacancy.ResumeEducation,
         vacancy.ResumePosition,
         module='employee_vacancy', type_='model')
+    Pool.register(
+        party.PartyReplace,
+        module='employee_vacancy', type_='wizard')
