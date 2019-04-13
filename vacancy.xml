@@ -10,19 +10,11 @@
             <field name="user" ref="res.user_admin"/>
             <field name="group" ref="group_employee_vacancy_admin"/>
         </record>
-        <record model="res.user-res.group" id="user_trigger_group_employee_vacancy_admin">
-            <field name="user" ref="res.user_trigger"/>
-            <field name="group" ref="group_employee_vacancy_admin"/>
-        </record>
         <record model="res.group" id="group_employee_vacancy">
             <field name="name">Employee Vacancy</field>
         </record>
         <record model="res.user-res.group" id="user_admin_group_employee_vacancy">
             <field name="user" ref="res.user_admin"/>
-            <field name="group" ref="group_employee_vacancy"/>
-        </record>
-        <record model="res.user-res.group" id="user_trigger_group_employee_vacancy">
-            <field name="user" ref="res.user_trigger"/>
             <field name="group" ref="group_employee_vacancy"/>
         </record>
         <record model="ir.ui.view" id="employee_candidate_view_form">
