@@ -639,6 +639,7 @@
         </record>
 
           <record model="ir.rule.group" id="rule_group_employee_vacancy">
+            <field name="name">Employee Vacancy Company Rule</field>
             <field name="model" search="[('model', '=', 'employee.vacancy')]"/>
             <field name="global_p" eval="True"/>
           </record>
@@ -649,6 +650,7 @@
           </record>
 
           <record model="ir.rule.group" id="rule_group_employee_candidate">
+            <field name="name">Employee Candidate Company Rule</field>
             <field name="model" search="[('model', '=', 'employee.candidate')]"/>
             <field name="global_p" eval="True"/>
           </record>
