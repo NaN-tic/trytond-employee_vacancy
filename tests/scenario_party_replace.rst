@@ -50,7 +50,7 @@ Create vacancy::
     >>> vacancy = Vacancy()
     >>> vacancy.name = 'Vacancy'
     >>> vacancy.employee = employee
-    >>> vacancy.text = 'We have a vacancy.'
+    >>> vacancy.description = 'We have a vacancy.'
     >>> vacancy.start = datetime.date.today() - relativedelta(days=15)
     >>> vacancy.end = datetime.date.today()
     >>> vacancy.save()
