@@ -41,7 +41,6 @@ Create vacancy administrator user::
     >>> vacancy_admin_user = User()
     >>> vacancy_admin_user.name = 'Vacancy Administrator'
     >>> vacancy_admin_user.login = 'vacancy_admin'
-    >>> vacancy_admin_user.main_company = company
     >>> vacancy_admin_group, = Group.find(
     ...     [('name', '=', 'Employee Vacancy Administration')])
     >>> vacancy_admin_user.groups.append(vacancy_admin_group)
@@ -54,7 +53,6 @@ Create vacancy user::
     >>> vacancy_user = User()
     >>> vacancy_user.name = 'Vacancy'
     >>> vacancy_user.login = 'vacancy'
-    >>> vacancy_user.main_company = company
     >>> vacancy_group, = Group.find(
     ...     [('name', '=', 'Employee Vacancy')])
     >>> vacancy_user.groups.append(vacancy_group)
