@@ -630,31 +630,30 @@
             <field name="perm_delete" eval="True"/>
         </record>
 
-          <record model="ir.rule.group" id="rule_group_employee_vacancy">
-            <field name="name">Employee Vacancy Company Rule</field>
-            <field name="model" search="[('model', '=', 'employee.vacancy')]"/>
-            <field name="global_p" eval="True"/>
-          </record>
+        <record model="ir.rule.group" id="rule_group_employee_vacancy">
+          <field name="name">Employee Vacancy Company Rule</field>
+          <field name="model" search="[('model', '=', 'employee.vacancy')]"/>
+          <field name="global_p" eval="True"/>
+        </record>
 
-          <record model="ir.rule" id="rule_employee_vacancy1">
-            <field name="domain" eval="[('company', '=', Eval('user', {}).get('company', None))]" pyson="1"/>
-            <field name="rule_group" ref="rule_group_employee_vacancy"/>
-          </record>
+        <record model="ir.rule" id="rule_employee_vacancy1">
+          <field name="domain" eval="[('company', '=', Eval('user', {}).get('company', None))]" pyson="1"/>
+          <field name="rule_group" ref="rule_group_employee_vacancy"/>
+        </record>
 
-          <record model="ir.rule.group" id="rule_group_employee_candidate">
-            <field name="name">Employee Candidate Company Rule</field>
-            <field name="model" search="[('model', '=', 'employee.candidate')]"/>
-            <field name="global_p" eval="True"/>
-          </record>
+        <record model="ir.rule.group" id="rule_group_employee_candidate">
+          <field name="name">Employee Candidate Company Rule</field>
+          <field name="model" search="[('model', '=', 'employee.candidate')]"/>
+          <field name="global_p" eval="True"/>
+        </record>
 
-          <record model="ir.rule" id="rule_employee_candidate1">
-            <field name="domain" eval="[('company', '=', Eval('user', {}).get('company', None))]" pyson="1"/>
-            <field name="rule_group" ref="rule_group_employee_vacancy"/>
-          </record>
-
+        <record model="ir.rule" id="rule_employee_candidate1">
+          <field name="domain" eval="[('company', '=', Eval('user', {}).get('company', None))]" pyson="1"/>
+          <field name="rule_group" ref="rule_group_employee_vacancy"/>
+        </record>
 
         <!-- Menus -->
-        <menuitem id="menu_vacancy" name="Employee Vacancy" sequence="1" />
+        <menuitem id="menu_vacancy" name="Employee Vacancy" sequence="20" />
         <record model="ir.ui.menu-res.group" id="menu_vacancy_group_employee_vacancy">
           <field name="menu" ref="menu_vacancy"/>
           <field name="group" ref="group_employee_vacancy"/>
