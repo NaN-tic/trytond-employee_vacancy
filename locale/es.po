@@ -1,0 +1,538 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:employee.candidate,activities:"
+msgid "Activities"
+msgstr "Actividades"
+
+msgctxt "field:employee.candidate,application_date:"
+msgid "Application Date"
+msgstr "Fecha de aplicación"
+
+msgctxt "field:employee.candidate,application_method:"
+msgid "Application Method"
+msgstr "Método de aplicación"
+
+msgctxt "field:employee.candidate,company:"
+msgid "Company"
+msgstr "Empresa"
+
+msgctxt "field:employee.candidate,notes:"
+msgid "Notes"
+msgstr "Notas"
+
+msgctxt "field:employee.candidate,party:"
+msgid "Party"
+msgstr "Terceros"
+
+msgctxt "field:employee.candidate,phase:"
+msgid "Phase"
+msgstr "Fase"
+
+msgctxt "field:employee.candidate,qualification:"
+msgid "Qualification"
+msgstr "Calificación"
+
+msgctxt "field:employee.candidate,resume:"
+msgid "Resume"
+msgstr "Resumen"
+
+msgctxt "field:employee.candidate,sequence:"
+msgid "Sequence"
+msgstr "Secuencia"
+
+msgctxt "field:employee.candidate,vacancy:"
+msgid "Vacancy"
+msgstr "Vacante"
+
+msgctxt "field:employee.candidate.application_method,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:employee.candidate.phase,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:employee.card.type,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:employee.education.level,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:employee.resume,age:"
+msgid "Age"
+msgstr "Edat"
+
+msgctxt "field:employee.resume,birthdate:"
+msgid "Birthdate"
+msgstr "Fecha de nacimiento"
+
+msgctxt "field:employee.resume,cards:"
+msgid "Cards"
+msgstr "Tarjetas"
+
+msgctxt "field:employee.resume,citizenship:"
+msgid "Citizenship"
+msgstr "Ciudadanía"
+
+msgctxt "field:employee.resume,educations:"
+msgid "Education"
+msgstr "Educación"
+
+msgctxt "field:employee.resume,gender:"
+msgid "Sex"
+msgstr "Genero"
+
+msgctxt "field:employee.resume,languages:"
+msgid "Languages"
+msgstr "Idiomas"
+
+msgctxt "field:employee.resume,notes:"
+msgid "Notes"
+msgstr "Notas"
+
+msgctxt "field:employee.resume,party:"
+msgid "Party"
+msgstr "Terceros"
+
+msgctxt "field:employee.resume,picture:"
+msgid "Picture"
+msgstr "Fotografía"
+
+msgctxt "field:employee.resume,positions:"
+msgid "Positions"
+msgstr "Posiciónes"
+
+msgctxt "field:employee.resume,skills:"
+msgid "Skills"
+msgstr "Habilidades"
+
+msgctxt "field:employee.resume,text:"
+msgid "Text"
+msgstr "Texto"
+
+msgctxt "field:employee.resume,url:"
+msgid "URL"
+msgstr "URL"
+
+msgctxt "field:employee.resume.card,card:"
+msgid "Card"
+msgstr "Tarjeta"
+
+msgctxt "field:employee.resume.card,expiry_date:"
+msgid "Expiry Date"
+msgstr "Fecha de caducidad"
+
+msgctxt "field:employee.resume.card,identifier:"
+msgid "Identifier"
+msgstr "Identificador"
+
+msgctxt "field:employee.resume.card,issue_date:"
+msgid "Issue Date"
+msgstr "Fecha de asunto"
+
+msgctxt "field:employee.resume.card,resume:"
+msgid "Resume"
+msgstr "Resumen"
+
+msgctxt "field:employee.resume.education,degree:"
+msgid "Degree"
+msgstr "Grado"
+
+msgctxt "field:employee.resume.education,description:"
+msgid "Description"
+msgstr "Descripción"
+
+msgctxt "field:employee.resume.education,end_year:"
+msgid "End Year"
+msgstr "Año final"
+
+msgctxt "field:employee.resume.education,field:"
+msgid "Field of study"
+msgstr "Campo de estudio"
+
+msgctxt "field:employee.resume.education,level:"
+msgid "Level"
+msgstr "Nivel"
+
+msgctxt "field:employee.resume.education,resume:"
+msgid "Resume"
+msgstr "Resumen"
+
+msgctxt "field:employee.resume.education,school:"
+msgid "School"
+msgstr "Escuela"
+
+msgctxt "field:employee.resume.education,start_year:"
+msgid "Start Year"
+msgstr "Año de inicio"
+
+msgctxt "field:employee.resume.language,fluency:"
+msgid "Fluency"
+msgstr "Fluidez"
+
+msgctxt "field:employee.resume.language,language:"
+msgid "Language"
+msgstr "Idioma"
+
+msgctxt "field:employee.resume.language,notes:"
+msgid "Notes"
+msgstr "Notas"
+
+msgctxt "field:employee.resume.language,resume:"
+msgid "Resume"
+msgstr "Resumen"
+
+msgctxt "field:employee.resume.language,skill:"
+msgid "Skill"
+msgstr "Habilidad"
+
+msgctxt "field:employee.resume.position,description:"
+msgid "Description"
+msgstr "Descripción"
+
+msgctxt "field:employee.resume.position,end:"
+msgid "End"
+msgstr "Finalizado"
+
+msgctxt "field:employee.resume.position,location:"
+msgid "Location"
+msgstr "Ubicación"
+
+msgctxt "field:employee.resume.position,organization:"
+msgid "Organization"
+msgstr "Organización"
+
+msgctxt "field:employee.resume.position,resume:"
+msgid "Resume"
+msgstr "Resumen"
+
+msgctxt "field:employee.resume.position,start:"
+msgid "Start"
+msgstr "Inicio"
+
+msgctxt "field:employee.resume.position,title:"
+msgid "Title"
+msgstr "Título"
+
+msgctxt "field:employee.resume.skill,notes:"
+msgid "Notes"
+msgstr "Notas"
+
+msgctxt "field:employee.resume.skill,resume:"
+msgid "Resume"
+msgstr "Resumen"
+
+msgctxt "field:employee.resume.skill,skill:"
+msgid "Skill"
+msgstr "Habilidad"
+
+msgctxt "field:employee.resume.skill,years:"
+msgid "Years of experience"
+msgstr "Años de experiencia"
+
+msgctxt "field:employee.skill.type,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:employee.vacancy,candidates:"
+msgid "Candidates"
+msgstr "Candidatos"
+
+msgctxt "field:employee.vacancy,company:"
+msgid "Company"
+msgstr "Empresa"
+
+msgctxt "field:employee.vacancy,description:"
+msgid "Description"
+msgstr "Descripción"
+
+msgctxt "field:employee.vacancy,employee:"
+msgid "Employee"
+msgstr "Empleado"
+
+msgctxt "field:employee.vacancy,end:"
+msgid "End"
+msgstr "Finalizado"
+
+msgctxt "field:employee.vacancy,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:employee.vacancy,start:"
+msgid "Start"
+msgstr "Inicio"
+
+msgctxt "field:employee.vacancy,state:"
+msgid "State"
+msgstr "Estado"
+
+msgctxt "field:employee.vacancy,urls:"
+msgid "URLs"
+msgstr "URLs"
+
+msgctxt "field:employee.vacancy.url,url:"
+msgid "URL"
+msgstr "URL"
+
+msgctxt "field:employee.vacancy.url,vacancy:"
+msgid "Vacancy"
+msgstr "Vacante"
+
+msgctxt "model:employee.candidate,name:"
+msgid "Candidate"
+msgstr "Candidato"
+
+msgctxt "model:employee.candidate.application_method,name:"
+msgid "Candidate Application Method"
+msgstr "Método de solicitud de candidato"
+
+msgctxt "model:employee.candidate.phase,name:"
+msgid "Candidate Phase"
+msgstr "Fase de candidato"
+
+msgctxt "model:employee.card.type,name:"
+msgid "Employee Card Type"
+msgstr "Tipo de tarjeta de empleado"
+
+msgctxt "model:employee.education.level,name:"
+msgid "Employee Education Level"
+msgstr "Nivel de educación del empleado"
+
+msgctxt "model:employee.resume,name:"
+msgid "Resume"
+msgstr "Resumen"
+
+msgctxt "model:employee.resume.card,name:"
+msgid "Resume Card"
+msgstr "Resumen de tarjeta"
+
+msgctxt "model:employee.resume.education,name:"
+msgid "Resume Education"
+msgstr "Resumen de educación"
+
+msgctxt "model:employee.resume.language,name:"
+msgid "Resume Language"
+msgstr "Resumen idioma"
+
+msgctxt "model:employee.resume.position,name:"
+msgid "Resume Position"
+msgstr "Resumen de posición"
+
+msgctxt "model:employee.resume.skill,name:"
+msgid "Resume Skill"
+msgstr "Resumen de habilidades"
+
+msgctxt "model:employee.skill.type,name:"
+msgid "Employee Skill Type"
+msgstr "Tipo de habilidad del empleado"
+
+msgctxt "model:employee.vacancy,name:"
+msgid "Vacancy"
+msgstr "Vacante"
+
+msgctxt "model:employee.vacancy.url,name:"
+msgid "Vacancy URL"
+msgstr "URL de Vacante"
+
+msgctxt "model:ir.action,name:act_employee_candidate"
+msgid "Candidate"
+msgstr "Candidato"
+
+msgctxt "model:ir.action,name:act_employee_candidate_application_method"
+msgid "Candidate Application Method"
+msgstr "Método de solicitud de candidato"
+
+msgctxt "model:ir.action,name:act_employee_candidate_phase"
+msgid "Candidate Phase"
+msgstr "Fase de candidato"
+
+msgctxt "model:ir.action,name:act_employee_card_type"
+msgid "Employee Card Type"
+msgstr "Tipo de tarjeta de empleado"
+
+msgctxt "model:ir.action,name:act_employee_education_level"
+msgid "Employee Education Level"
+msgstr "Nivel de educación del empleado"
+
+msgctxt "model:ir.action,name:act_employee_resume"
+msgid "Resume"
+msgstr "Resumen"
+
+msgctxt "model:ir.action,name:act_employee_resume_card"
+msgid "Candidate Card"
+msgstr "Tarjeta de candidato"
+
+msgctxt "model:ir.action,name:act_employee_resume_education"
+msgid "Resume Education"
+msgstr "Resumen de educación"
+
+msgctxt "model:ir.action,name:act_employee_resume_language"
+msgid "Resume Language"
+msgstr "Resumen idioma"
+
+msgctxt "model:ir.action,name:act_employee_resume_position"
+msgid "Resume Position"
+msgstr "Resumen de posición"
+
+msgctxt "model:ir.action,name:act_employee_resume_skill"
+msgid "Resume Skill"
+msgstr "Resumen de habilidades"
+
+msgctxt "model:ir.action,name:act_employee_skill_type"
+msgid "Employee Skill Type"
+msgstr "Tipo de habilidad del empleado"
+
+msgctxt "model:ir.action,name:act_employee_vacancy"
+msgid "Vacancy"
+msgstr "Vacante"
+
+msgctxt "model:ir.action,name:act_employee_vacancy_url"
+msgid "Vacancy URL"
+msgstr "URL de Vacante"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_employee_vacancy_domain_all"
+msgid "All"
+msgstr "Todo"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_employee_vacancy_domain_draft"
+msgid "Draft"
+msgstr "Borrador"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_employee_vacancy_domain_open"
+msgid "Open"
+msgstr "Abierto"
+
+msgctxt "model:ir.rule.group,name:rule_group_employee_candidate"
+msgid "Employee Candidate Company Rule"
+msgstr "Regla de empresa candidato de empleado"
+
+msgctxt "model:ir.rule.group,name:rule_group_employee_vacancy"
+msgid "Employee Vacancy Company Rule"
+msgstr "Regla de empresa Vacante de empleado"
+
+msgctxt "model:ir.ui.menu,name:menu_candidate"
+msgid "Candidate"
+msgstr "Candidato"
+
+msgctxt "model:ir.ui.menu,name:menu_candidate_application_method"
+msgid "Candidate Application Method"
+msgstr "Método de solicitud de candidato"
+
+msgctxt "model:ir.ui.menu,name:menu_candidate_phase"
+msgid "Candidate Phase"
+msgstr "Fase de candidato"
+
+msgctxt "model:ir.ui.menu,name:menu_card_type"
+msgid "Card Type"
+msgstr "Tipo de tarjeta"
+
+msgctxt "model:ir.ui.menu,name:menu_configuration"
+msgid "Configuration"
+msgstr "Configuración"
+
+msgctxt "model:ir.ui.menu,name:menu_education_level"
+msgid "Education Level"
+msgstr "Nivel de educación"
+
+msgctxt "model:ir.ui.menu,name:menu_resume"
+msgid "Resume"
+msgstr "Resumen"
+
+msgctxt "model:ir.ui.menu,name:menu_resume_card"
+msgid "Resume Card"
+msgstr "Resumen de tarjeta"
+
+msgctxt "model:ir.ui.menu,name:menu_resume_education"
+msgid "Resume Education"
+msgstr "Resumen de educación"
+
+msgctxt "model:ir.ui.menu,name:menu_resume_language"
+msgid "Resume Language"
+msgstr "Resumen idioma"
+
+msgctxt "model:ir.ui.menu,name:menu_resume_position"
+msgid "Resume Position"
+msgstr "Resumen de posición"
+
+msgctxt "model:ir.ui.menu,name:menu_resume_skill"
+msgid "Resume Skill"
+msgstr "Resumen de habilidades"
+
+msgctxt "model:ir.ui.menu,name:menu_skill_type"
+msgid "Employee Skill Type"
+msgstr "Tipo de habilidad del empleado"
+
+msgctxt "model:ir.ui.menu,name:menu_vacancy"
+msgid "Employee Vacancy"
+msgstr "Vacante de empleado"
+
+msgctxt "model:ir.ui.menu,name:menu_vacancy_url"
+msgid "Vacancy URL"
+msgstr "URL de Vacante"
+
+msgctxt "model:ir.ui.menu,name:menu_vacancy_vacancy"
+msgid "Vacancy"
+msgstr "Vacante"
+
+msgctxt "model:res.group,name:group_employee_vacancy"
+msgid "Employee Vacancy"
+msgstr "Vacante de empleado"
+
+msgctxt "model:res.group,name:group_employee_vacancy_admin"
+msgid "Employee Vacancy Administration"
+msgstr "Administrador Vacante de empleado"
+
+msgctxt "selection:employee.resume,gender:"
+msgid "Female"
+msgstr "Femenino"
+
+msgctxt "selection:employee.resume,gender:"
+msgid "Male"
+msgstr "Masculino"
+
+msgctxt "selection:employee.resume.language,fluency:"
+msgid "Basic"
+msgstr "Básico"
+
+msgctxt "selection:employee.resume.language,fluency:"
+msgid "Good"
+msgstr "Bueno"
+
+msgctxt "selection:employee.resume.language,fluency:"
+msgid "Mother Tongue"
+msgstr "Lengua materna"
+
+msgctxt "selection:employee.resume.language,fluency:"
+msgid "Poor"
+msgstr "Pobre"
+
+msgctxt "selection:employee.resume.language,skill:"
+msgid "Reading"
+msgstr "Leído"
+
+msgctxt "selection:employee.resume.language,skill:"
+msgid "Speaking"
+msgstr "Hablado"
+
+msgctxt "selection:employee.resume.language,skill:"
+msgid "Writing"
+msgstr "Escrito"
+
+msgctxt "selection:employee.vacancy,state:"
+msgid "Closed"
+msgstr "Cerrado"
+
+msgctxt "selection:employee.vacancy,state:"
+msgid "Draft"
+msgstr "Borrador"
+
+msgctxt "selection:employee.vacancy,state:"
+msgid "Open"
+msgstr "Abierto"
