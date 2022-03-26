@@ -123,10 +123,7 @@ class Candidate(ModelSQL, ModelView):
         'get_company', searcher='search_company')
     vacancy = fields.Many2One('employee.vacancy', 'Vacancy', required=True,
         ondelete='CASCADE')
-    party = fields.Many2One('party.party', 'Party', required=True,
-        context={
-            'company': Eval('company'),
-        }, depends=['company'])
+    party = fields.Many2One('party.party', 'Party', required=True)
     resume = fields.Many2One('employee.resume', 'Resume', domain=[
             ('party', '=', Eval('party')),
             ], depends=['party'])
