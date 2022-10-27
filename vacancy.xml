@@ -658,6 +658,27 @@
           <field name="rule_group" ref="rule_group_employee_candidate"/>
         </record>
 
+        <record model="ir.ui.view" id="linkedin_import_start_form">
+            <field name="model">employee.candidate.linkedin.import.start</field>
+            <field name="type">form</field>
+            <field name="name">linkedin_import_start_form</field>
+        </record>
+        <record model="ir.ui.view" id="linkedin_import_result_form">
+            <field name="model">employee.candidate.linkedin.import.result</field>
+            <field name="type">form</field>
+            <field name="name">linkedin_import_result_form</field>
+        </record>
+        <record model="ir.action.wizard" id="wizard_import_linkedin_candidates">
+            <field name="name">Import LinkedIn Candidates</field>
+            <field name="wiz_name">employee.candidate.linkedin.import</field>
+            <field name="model">employee.vacancy</field>
+        </record>
+        <record model="ir.action.keyword" id="check_vies_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">employee.vacancy,-1</field>
+            <field name="action" ref="wizard_import_linkedin_candidates"/>
+        </record>
+
         <!-- Menus -->
         <menuitem id="menu_vacancy" name="Employee Vacancy" sequence="20" />
         <record model="ir.ui.menu-res.group" id="menu_vacancy_group_employee_vacancy">
