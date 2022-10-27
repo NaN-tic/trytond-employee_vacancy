@@ -22,7 +22,10 @@ def register():
         vacancy.EmployeeEducationLevel,
         vacancy.ResumeEducation,
         vacancy.ResumePosition,
+        vacancy.ImportCandidateLinkedInStart,
+        vacancy.ImportCandidateLinkedInResult,
         module='employee_vacancy', type_='model')
     Pool.register(
         party.PartyReplace,
+        vacancy.ImportCandidateLinkedIn,
         module='employee_vacancy', type_='wizard')

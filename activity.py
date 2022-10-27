@@ -3,8 +3,6 @@
 from trytond.pool import PoolMeta
 from trytond.transaction import Transaction
 
-__all__ = ['Activity']
-
 
 class Activity(metaclass=PoolMeta):
     __name__ = 'activity.activity'
