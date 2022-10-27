@@ -2,8 +2,6 @@
 # copyright notices and license terms.
 from trytond.pool import PoolMeta
 
-__all__ = ['PartyReplace']
-
 
 class PartyReplace(metaclass=PoolMeta):
     __name__ = 'party.replace'

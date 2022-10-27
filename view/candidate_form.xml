@@ -17,10 +17,12 @@
             <field name="qualification"/>
             <label name="application_date"/>
             <field name="application_date"/>
-            <label name="application_method"/>
-            <field name="application_method"/>
             <label name="sequence"/>
             <field name="sequence"/>
+            <label name="application_method"/>
+            <field name="application_method"/>
+            <label name="url"/>
+            <field name="url"/>
             <separator name="notes" colspan="4"/>
             <field name="notes" colspan="4"/>
         </page>
