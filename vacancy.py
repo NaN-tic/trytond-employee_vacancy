@@ -376,8 +376,6 @@ class ImportCandidateLinkedIn(Wizard):
                             self.scrape_login(page, username, password)
 
                         profile = self.scrape_profile(page)
-                        print('Profile:')
-                        print(profile)
                         profiles.append(profile)
                         break
                     except TimeoutError:
