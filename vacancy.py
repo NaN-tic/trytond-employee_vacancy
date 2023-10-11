@@ -6,7 +6,6 @@ from trytond.wizard import Wizard, StateView, StateTransition, Button
 from trytond.pyson import Eval
 from trytond.transaction import Transaction
 from trytond.pool import Pool
-from trytond.exceptions import UserError
 
 
 class Resume(ModelSQL, ModelView):
@@ -321,8 +320,6 @@ class ImportCandidateLinkedIn(Wizard):
 
         profile = page.locator('a:has-text("See full profile")').get_attribute('href')
         profile = profile.strip()
-
-        more = page.locator("button:has-text('More…')").click()
 
         # Wait to ensure email and phone are loaded after the click
         page.wait_for_timeout(1000)
