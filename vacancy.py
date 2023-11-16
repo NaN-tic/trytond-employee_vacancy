@@ -52,7 +52,7 @@ class Vacancy(ModelSQL, ModelView):
     company = fields.Many2One('company.company', 'Company', required=True)
     employee = fields.Many2One('company.employee', 'Employee', required=True,
         depends=['state', 'company'], domain=[
-            ('company', '=', Eval('company')),
+            ('company', '=', Eval('company', -1)),
             ])
     start = fields.Date('Start')
     end = fields.Date('End')
@@ -115,7 +115,7 @@ class Candidate(ModelSQL, ModelView):
         ondelete='CASCADE')
     party = fields.Many2One('party.party', 'Party', required=True,
         context={
-            'company': Eval('company'),
+            'company': Eval('company', -1),
         }, depends=['company'])
     resume = fields.Many2One('employee.resume', 'Resume', domain=[
             ('party', '=', Eval('party')),
