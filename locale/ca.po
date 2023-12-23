@@ -96,7 +96,7 @@ msgstr "Notes"
 
 msgctxt "field:employee.resume,party:"
 msgid "Party"
-msgstr "Tercers"
+msgstr "Tercer"
 
 msgctxt "field:employee.resume,picture:"
 msgid "Picture"

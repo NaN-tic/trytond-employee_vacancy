@@ -24,7 +24,7 @@ msgstr "Notas"
 
 msgctxt "field:employee.candidate,party:"
 msgid "Party"
-msgstr "Terceros"
+msgstr "Tercero"
 
 msgctxt "field:employee.candidate,phase:"
 msgid "Phase"
