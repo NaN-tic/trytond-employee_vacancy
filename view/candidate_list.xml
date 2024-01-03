@@ -8,4 +8,5 @@
     <field name="phase"/>
     <field name="qualification"/>
     <field name="application_date"/>
+    <field name="url" widget="url"/>
 </tree>
