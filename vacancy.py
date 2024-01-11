@@ -118,7 +118,7 @@ class Candidate(ModelSQL, ModelView):
         }, depends=['company'])
     resume = fields.Many2One('employee.resume', 'Resume', domain=[
             ('party', '=', Eval('party')),
-            ], depends=['party'])
+            ])
     application_method = fields.Many2One(
         'employee.candidate.application_method', 'Application Method')
     url = fields.Char('URL')
