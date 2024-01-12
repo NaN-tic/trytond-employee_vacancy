@@ -50,9 +50,7 @@ class Vacancy(ModelSQL, ModelView):
     description = fields.Text('Description')
     company = fields.Many2One('company.company', 'Company', required=True)
     employee = fields.Many2One('company.employee', 'Employee', required=True,
-        depends=['state', 'company'], domain=[
-            ('company', '=', Eval('company', -1)),
-            ])
+        domain=[('company', '=', Eval('company', -1))])
     start = fields.Date('Start')
     end = fields.Date('End')
     candidates = fields.One2Many('employee.candidate', 'vacancy',
