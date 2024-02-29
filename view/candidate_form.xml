@@ -23,7 +23,6 @@
             <field name="application_method"/>
             <label name="url"/>
             <group id="url" col="2">
-                <field name="url"/>
                 <field name="url" widget="url"/>
             </group>
             <separator name="notes" colspan="4"/>
