@@ -44,14 +44,14 @@
             <field name="act_window" ref="act_employee_candidate"/>
         </record>
         <record model="ir.model.access" id="access_employee_candidate_default">
-            <field name="model" search="[('model', '=', 'employee.candidate')]"/>
+            <field name="model">employee.candidate</field>
             <field name="perm_read" eval="False"/>
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
             <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_employee_candidate">
-            <field name="model" search="[('model', '=', 'employee.candidate')]"/>
+            <field name="model">employee.candidate</field>
             <field name="group" ref="group_employee_vacancy"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
@@ -85,14 +85,14 @@
             <field name="act_window" ref="act_employee_candidate_phase"/>
         </record>
         <record model="ir.model.access" id="access_employee_candidate_phase_default">
-            <field name="model" search="[('model', '=', 'employee.candidate.phase')]"/>
+            <field name="model">employee.candidate.phase</field>
             <field name="perm_read" eval="False"/>
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
             <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_employee_candidate_phase">
-            <field name="model" search="[('model', '=', 'employee.candidate.phase')]"/>
+            <field name="model">employee.candidate.phase</field>
             <field name="group" ref="group_employee_vacancy"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="False"/>
@@ -100,7 +100,7 @@
             <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_employee_candidate_phase_admin">
-            <field name="model" search="[('model', '=', 'employee.candidate.phase')]"/>
+            <field name="model">employee.candidate.phase</field>
             <field name="group" ref="group_employee_vacancy_admin"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
@@ -132,14 +132,14 @@
             <field name="act_window" ref="act_employee_candidate_application_method"/>
         </record>
         <record model="ir.model.access" id="access_employee_candidate_application_method_default">
-            <field name="model" search="[('model', '=', 'employee.candidate.application_method')]"/>
+            <field name="model">employee.candidate.application_method</field>
             <field name="perm_read" eval="False"/>
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
             <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_employee_candidate_application_method">
-            <field name="model" search="[('model', '=', 'employee.candidate.application_method')]"/>
+            <field name="model">employee.candidate.application_method</field>
             <field name="group" ref="group_employee_vacancy"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="False"/>
@@ -147,7 +147,7 @@
             <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_employee_candidate_application_method_admin">
-            <field name="model" search="[('model', '=', 'employee.candidate.application_method')]"/>
+            <field name="model">employee.candidate.application_method</field>
             <field name="group" ref="group_employee_vacancy_admin"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
@@ -179,14 +179,14 @@
             <field name="act_window" ref="act_employee_card_type"/>
         </record>
         <record model="ir.model.access" id="access_employee_card_type_default">
-            <field name="model" search="[('model', '=', 'employee.card.type')]"/>
+            <field name="model">employee.card.type</field>
             <field name="perm_read" eval="False"/>
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
             <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_employee_card_type">
-            <field name="model" search="[('model', '=', 'employee.card.type')]"/>
+            <field name="model">employee.card.type</field>
             <field name="group" ref="group_employee_vacancy"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="False"/>
@@ -194,7 +194,7 @@
             <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_employee_card_type_admin">
-            <field name="model" search="[('model', '=', 'employee.card.type')]"/>
+            <field name="model">employee.card.type</field>
             <field name="group" ref="group_employee_vacancy_admin"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
@@ -226,14 +226,14 @@
             <field name="act_window" ref="act_employee_education_level"/>
         </record>
         <record model="ir.model.access" id="access_employee_education_level_default">
-            <field name="model" search="[('model', '=', 'employee.education.level')]"/>
+            <field name="model">employee.education.level</field>
             <field name="perm_read" eval="False"/>
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
             <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_employee_education_level">
-            <field name="model" search="[('model', '=', 'employee.education.level')]"/>
+            <field name="model">employee.education.level</field>
             <field name="group" ref="group_employee_vacancy"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="False"/>
@@ -241,7 +241,7 @@
             <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_employee_education_level_admin">
-            <field name="model" search="[('model', '=', 'employee.education.level')]"/>
+            <field name="model">employee.education.level</field>
             <field name="group" ref="group_employee_vacancy_admin"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
@@ -273,14 +273,14 @@
             <field name="act_window" ref="act_employee_resume"/>
         </record>
         <record model="ir.model.access" id="access_employee_resume_default">
-            <field name="model" search="[('model', '=', 'employee.resume')]"/>
+            <field name="model">employee.resume</field>
             <field name="perm_read" eval="False"/>
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
             <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_employee_resume">
-            <field name="model" search="[('model', '=', 'employee.resume')]"/>
+            <field name="model">employee.resume</field>
             <field name="group" ref="group_employee_vacancy"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
@@ -288,7 +288,7 @@
             <field name="perm_delete" eval="True"/>
         </record>
         <record model="ir.model.access" id="access_employee_resume_admin">
-            <field name="model" search="[('model', '=', 'employee.resume')]"/>
+            <field name="model">employee.resume</field>
             <field name="group" ref="group_employee_vacancy_admin"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
@@ -320,14 +320,14 @@
             <field name="act_window" ref="act_employee_resume_card"/>
         </record>
         <record model="ir.model.access" id="access_employee_resume_card_default">
-            <field name="model" search="[('model', '=', 'employee.resume.card')]"/>
+            <field name="model">employee.resume.card</field>
             <field name="perm_read" eval="False"/>
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
             <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_employee_resume_card">
-            <field name="model" search="[('model', '=', 'employee.resume.card')]"/>
+            <field name="model">employee.resume.card</field>
             <field name="group" ref="group_employee_vacancy"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
@@ -359,14 +359,14 @@
             <field name="act_window" ref="act_employee_resume_education"/>
         </record>
         <record model="ir.model.access" id="access_employee_resume_education_default">
-            <field name="model" search="[('model', '=', 'employee.resume.education')]"/>
+            <field name="model">employee.resume.education</field>
             <field name="perm_read" eval="False"/>
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
             <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_employee_resume_education">
-            <field name="model" search="[('model', '=', 'employee.resume.education')]"/>
+            <field name="model">employee.resume.education</field>
             <field name="group" ref="group_employee_vacancy"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
@@ -398,14 +398,14 @@
             <field name="act_window" ref="act_employee_resume_language"/>
         </record>
         <record model="ir.model.access" id="access_employee_resume_language_default">
-            <field name="model" search="[('model', '=', 'employee.resume.language')]"/>
+            <field name="model">employee.resume.language</field>
             <field name="perm_read" eval="False"/>
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
             <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_employee_resume_language">
-            <field name="model" search="[('model', '=', 'employee.resume.language')]"/>
+            <field name="model">employee.resume.language</field>
             <field name="group" ref="group_employee_vacancy"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
@@ -437,14 +437,14 @@
             <field name="act_window" ref="act_employee_resume_position"/>
         </record>
         <record model="ir.model.access" id="access_employee_resume_position_default">
-            <field name="model" search="[('model', '=', 'employee.resume.position')]"/>
+            <field name="model">employee.resume.position</field>
             <field name="perm_read" eval="False"/>
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
             <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_employee_resume_position">
-            <field name="model" search="[('model', '=', 'employee.resume.position')]"/>
+            <field name="model">employee.resume.position</field>
             <field name="group" ref="group_employee_vacancy"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
@@ -476,14 +476,14 @@
             <field name="act_window" ref="act_employee_resume_skill"/>
         </record>
         <record model="ir.model.access" id="access_employee_resume_skill_default">
-            <field name="model" search="[('model', '=', 'employee.resume.skill')]"/>
+            <field name="model">employee.resume.skill</field>
             <field name="perm_read" eval="False"/>
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
             <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_employee_resume_skill">
-            <field name="model" search="[('model', '=', 'employee.resume.skill')]"/>
+            <field name="model">employee.resume.skill</field>
             <field name="group" ref="group_employee_vacancy"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
@@ -515,14 +515,14 @@
             <field name="act_window" ref="act_employee_skill_type"/>
         </record>
         <record model="ir.model.access" id="access_employee_skill_type_default">
-            <field name="model" search="[('model', '=', 'employee.skill.type')]"/>
+            <field name="model">employee.skill.type</field>
             <field name="perm_read" eval="False"/>
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
             <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_employee_skill_type">
-            <field name="model" search="[('model', '=', 'employee.skill.type')]"/>
+            <field name="model">employee.skill.type</field>
             <field name="group" ref="group_employee_vacancy"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="False"/>
@@ -530,7 +530,7 @@
             <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_employee_skill_type_admin">
-            <field name="model" search="[('model', '=', 'employee.skill.type')]"/>
+            <field name="model">employee.skill.type</field>
             <field name="group" ref="group_employee_vacancy_admin"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
@@ -580,14 +580,14 @@
             <field name="act_window" ref="act_employee_vacancy"/>
         </record>
         <record model="ir.model.access" id="access_employee_vacancy_default">
-            <field name="model" search="[('model', '=', 'employee.vacancy')]"/>
+            <field name="model">employee.vacancy</field>
             <field name="perm_read" eval="False"/>
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
             <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_employee_vacancy">
-            <field name="model" search="[('model', '=', 'employee.vacancy')]"/>
+            <field name="model">employee.vacancy</field>
             <field name="group" ref="group_employee_vacancy"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
@@ -619,14 +619,14 @@
             <field name="act_window" ref="act_employee_vacancy_url"/>
         </record>
         <record model="ir.model.access" id="access_employee_vacancy_url_default">
-            <field name="model" search="[('model', '=', 'employee.vacancy.url')]"/>
+            <field name="model">employee.vacancy.url</field>
             <field name="perm_read" eval="False"/>
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
             <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_employee_vacancy_url">
-            <field name="model" search="[('model', '=', 'employee.vacancy.url')]"/>
+            <field name="model">employee.vacancy.url</field>
             <field name="group" ref="group_employee_vacancy"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
@@ -636,7 +636,7 @@
 
         <record model="ir.rule.group" id="rule_group_employee_vacancy">
           <field name="name">Employee Vacancy Company Rule</field>
-          <field name="model" search="[('model', '=', 'employee.vacancy')]"/>
+            <field name="model">employee.vacancy</field>
           <field name="global_p" eval="True"/>
         </record>
         <record model="ir.rule" id="rule_employee_vacancy1">
@@ -647,15 +647,15 @@
         </record>
 
         <record model="ir.rule.group" id="rule_group_employee_candidate">
-          <field name="name">Employee Candidate Company Rule</field>
-          <field name="model" search="[('model', '=', 'employee.candidate')]"/>
-          <field name="global_p" eval="True"/>
+            <field name="name">Employee Candidate Company Rule</field>
+            <field name="model">employee.candidate</field>
+            <field name="global_p" eval="True"/>
         </record>
         <record model="ir.rule" id="rule_employee_candidate1">
-          <field name="domain"
-            eval="[('company', 'in', Eval('companies', []))]"
-            pyson="1"/>
-          <field name="rule_group" ref="rule_group_employee_candidate"/>
+            <field name="domain"
+              eval="[('company', 'in', Eval('companies', []))]"
+              pyson="1"/>
+            <field name="rule_group" ref="rule_group_employee_candidate"/>
         </record>
 
         <record model="ir.ui.view" id="linkedin_import_start_form">
@@ -682,15 +682,15 @@
         <!-- Menus -->
         <menuitem id="menu_vacancy" name="Employee Vacancy" sequence="20" />
         <record model="ir.ui.menu-res.group" id="menu_vacancy_group_employee_vacancy">
-          <field name="menu" ref="menu_vacancy"/>
-          <field name="group" ref="group_employee_vacancy"/>
+            <field name="menu" ref="menu_vacancy"/>
+            <field name="group" ref="group_employee_vacancy"/>
         </record>
 
         <menuitem id="menu_configuration" name="Configuration"
             parent="menu_vacancy" sequence="1"/>
         <record model="ir.ui.menu-res.group" id="menu_vacancy_group_employee_vacancy_admin">
-          <field name="menu" ref="menu_configuration"/>
-          <field name="group" ref="group_employee_vacancy_admin"/>
+            <field name="menu" ref="menu_configuration"/>
+            <field name="group" ref="group_employee_vacancy_admin"/>
         </record>
 
         <menuitem action="act_employee_resume" id="menu_resume" parent="menu_vacancy" sequence="10" name="Resume"/>
