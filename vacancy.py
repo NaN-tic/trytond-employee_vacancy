@@ -1,8 +1,5 @@
-import os
-import random
 from dateutil.relativedelta import relativedelta
 from trytond.model import ModelSQL, ModelView, fields
-from trytond.wizard import Wizard, StateView, StateTransition, Button
 from trytond.pyson import Eval
 from trytond.transaction import Transaction
 from trytond.pool import Pool
