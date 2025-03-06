@@ -19,7 +19,7 @@
             <field name="urls" colspan="2"/>
         </page>
         <page name="candidates">
-            <field name="candidates" colspan="4"/>
+            <field name="candidates" colspan="4" height="400"/>
         </page>
     </notebook>
     <label name="state"/>
