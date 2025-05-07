@@ -129,6 +129,10 @@ class Candidate(ModelSQL, ModelView):
             'vacancy_party': Eval('party'),
             }, depends=['party'])
 
+    @classmethod
+    def search_rec_name(cls, name, clause):
+        return [('party.rec_name',) + tuple(clause[1:])]
+
     @fields.depends('party')
     def on_change_with_resume(self):
         Resume = Pool().get('employee.resume')
