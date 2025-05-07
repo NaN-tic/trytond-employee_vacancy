@@ -91,6 +91,9 @@ class CandidatePhase(ModelSQL, ModelView):
     'Candidate Phase'
     __name__ = 'employee.candidate.phase'
     name = fields.Char('Name', required=True)
+    final = fields.Boolean('Final', help='A final phase, indicates that the '
+        'candidature phase is not expected to be updated any more. Ie. '
+        '"Rejected", "Contracted", etc.')
 
 
 class CandidateApplicationMethod(ModelSQL, ModelView):
