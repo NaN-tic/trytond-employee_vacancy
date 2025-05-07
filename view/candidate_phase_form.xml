@@ -4,4 +4,6 @@
 <form>
     <label name="name"/>
     <field name="name"/>
+    <label name="final"/>
+    <field name="final"/>
 </form>
