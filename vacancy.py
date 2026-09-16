@@ -126,8 +126,9 @@ class Candidate(ModelSQL, ModelView):
     notes = fields.Text('Notes')
     activities = fields.One2Many('activity.activity', 'resource', 'Activities',
         context={
+            'company': Eval('company', -1),
             'vacancy_party': Eval('party'),
-            }, depends=['party'])
+            }, depends=['company', 'party'])
 
     @classmethod
     def search_rec_name(cls, name, clause):
