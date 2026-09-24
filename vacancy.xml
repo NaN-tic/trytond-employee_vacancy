@@ -6,16 +6,8 @@
         <record model="res.group" id="group_employee_vacancy_admin">
             <field name="name">Employee Vacancy Administration</field>
         </record>
-        <record model="res.user-res.group" id="user_admin_group_employee_vacancy_admin">
-            <field name="user" ref="res.user_admin"/>
-            <field name="group" ref="group_employee_vacancy_admin"/>
-        </record>
         <record model="res.group" id="group_employee_vacancy">
             <field name="name">Employee Vacancy</field>
-        </record>
-        <record model="res.user-res.group" id="user_admin_group_employee_vacancy">
-            <field name="user" ref="res.user_admin"/>
-            <field name="group" ref="group_employee_vacancy"/>
         </record>
 
         <!-- employee.candidate -->
